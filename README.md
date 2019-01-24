@@ -15,4 +15,4 @@ Oui
 
 # Très bien. Qu'est-ce qui se trouve sur cette page ?
 
-Le .tex de la présentation ainsiu que le pdf (auquel chacun travaille de son côté). Sont aussi présents les procès-verbaux (formels) de chacune des réunions de travail.
+Le .tex de la présentation ainsi que le pdf (auquel chacun travaille de son côté). Sont aussi présents les procès-verbaux (formels) de chacune des réunions de travail.
