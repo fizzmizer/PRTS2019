@@ -7,6 +7,7 @@
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing,patterns,backgrounds}
 \usepackage{multirow}
+\usepackage{overpic}
 
 
 
@@ -37,6 +38,10 @@ Université de Mons \\
 \definecolor{rouge}{rgb}{0.7,0,0}
 
 
+\newcommand{\positif}{\textcolor{OrangeRed}{$\oplus$} }
+\newcommand{\negatif}{\textcolor{ForestGreen}{$\ominus$} }
+
+
 
 \newcommand{\caneva}[3]{
 \draw[color=#3] (-#1/2,-#2/2) -- ++ (0,#2) -- ++ (#1,0) -- ++ (0,-#2) -- cycle;
@@ -57,10 +62,21 @@ Université de Mons \\
 \end{frame}
 
 \begin{frame}[plain]
-		\begin{center}
-		Une fois qu’on a éliminé l’impossible, ce qui reste, aussi improbable que cela soit, doit être la vérité. 
-		\end{center}
-	 Sir Arthur Conan Doyle
+\vspace{1.5cm}
+\begin{center}
+\itshape
+``Lorsque vous avez éliminé l'impossible, ce qui reste, si improbable soit-il, est nécessairement la vérité.''
+\end{center}
+
+\begin{flushright}
+Sir Arthur Conan Doyle
+\end{flushright}
+
+\begin{center}
+\includegraphics[scale=.15]{images/Sherlock.jpg}
+\end{center}
+
+                
 \end{frame}
 
 
@@ -413,7 +429,7 @@ Comment résoudre ce ``paradoxe'' ?
 \\ \color{umons-red} \textbf{\'{E}noncé du} \textit{paradoxe}
 \pause
 \begin{tabular}{cccc|}
-\includegraphics[scale=0.2]{images/Zenon.jpg}\pause    & \includegraphics[scale=0.49]{images/Achilles.jpg} \pause & \includegraphics[scale=0.08]{images/tortue.jpg} \pause & \includegraphics[scale=0.07]{images/piste.jpg}  \\ 
+\includegraphics[scale=0.2]{images/Zenon.jpg}\pause    & \includegraphics[scale=0.49]{images/Achilles.jpg} \pause & \includegraphics[scale=0.08]{images/piste.jpg} \pause & \includegraphics[scale=0.07]{images/tortue.jpg}  \\ 
 \end{tabular} 
 \end{frame}
 
@@ -444,7 +460,10 @@ Peut-être sera-ce plus clair sur cette figure :
 \begin{frame}[plain]{Paradoxe de Zénon}
 Une autre manière de voir le paradoxe
 \begin{center}
-\includegraphics[scale=0.5]{images/glass1.png}
+\begin{overpic}[scale=0.5]{images/glass1.png}
+\put(80,20){\huge$\frac{1}{2}$}
+\end{overpic}
+%\includegraphics[scale=0.5]{images/glass1.png}
 \end{center}
 \end{frame}
 
@@ -455,7 +474,12 @@ Une autre manière de voir le paradoxe
 \begin{frame}[plain]{Paradoxe de Zénon}
 Une autre manière de voir le paradoxe
 \begin{center}
-\includegraphics[scale=0.5]{images/glass2.png}
+\begin{overpic}[scale=0.5]{images/glass2.png}
+\put(80,20){\huge$\frac{1}{2}$}
+\put(80,40){\Large$+$}
+\put(80,55){\huge$\frac{1}{4}$}
+\end{overpic}
+%\includegraphics[scale=0.5]{images/glass2.png}
 \end{center}
 \end{frame}
 
@@ -464,7 +488,14 @@ Une autre manière de voir le paradoxe
 \begin{frame}[plain]{Paradoxe de Zénon}
 Une autre manière de voir le paradoxe
 \begin{center}
-\includegraphics[scale=0.5]{images/glass3.png}
+\begin{overpic}[scale=0.5]{images/glass3.png}
+\put(80,20){\huge$\frac{1}{2}$}
+\put(80,40){\Large$+$}
+\put(80,55){\huge$\frac{1}{4}$}
+\put(80,67){\large$+$}
+\put(80,75){\Large$\frac{1}{8}$}
+\end{overpic}
+%\includegraphics[scale=0.5]{images/glass3.png}
 \end{center}
 \end{frame}
 
@@ -476,7 +507,16 @@ Une autre manière de voir le paradoxe
 \begin{frame}[plain]{Paradoxe de Zénon}
 Une autre manière de voir le paradoxe
 \begin{center}
-\includegraphics[scale=0.5]{images/glass4.png}
+\begin{overpic}[scale=0.5]{images/glass4.png}
+\put(80,20){\huge$\frac{1}{2}$}
+\put(80,40){\Large$+$}
+\put(80,55){\huge$\frac{1}{4}$}
+\put(80,67){\large$+$}
+\put(80,75){\Large$\frac{1}{8}$}
+\put(80,85){\large$+$}
+\put(80,95){\Large$\vdots$}
+\end{overpic}
+%\includegraphics[scale=0.5]{images/glass4.png}
 \end{center}
 \end{frame}
 
@@ -485,7 +525,16 @@ Une autre manière de voir le paradoxe
 \begin{frame}[plain]{Paradoxe de Zénon}
 Une autre manière de voir le paradoxe
 \begin{center}
-\includegraphics[scale=0.5]{images/glass5.png}
+\begin{overpic}[scale=0.5]{images/glass5.png}
+\put(80,20){\huge$\frac{1}{2}$}
+\put(80,40){\Large$+$}
+\put(80,55){\huge$\frac{1}{4}$}
+\put(80,67){\large$+$}
+\put(80,75){\Large$\frac{1}{8}$}
+\put(80,85){\large$+$}
+\put(80,95){\Large$\vdots$}
+\end{overpic}
+%\includegraphics[scale=0.5]{images/glass5.png}
 \end{center}
 \end{frame}
 
@@ -503,8 +552,7 @@ Retour à la course entre Achille et la tortue
 
 
 \begin{frame}[plain]{Paradoxe de Zénon}
-Retour à la course entre Achille et la tortue 
-\pause
+Retour à la course entre Achille et la tortue
 \begin{center}
 \includegraphics[scale=0.35]{images/ZAPT3.png}
 \end{center}
@@ -514,13 +562,16 @@ Retour à la course entre Achille et la tortue
 
 
 \begin{frame}[plain]{Paradoxe de Zénon}
-Séries convergentes :
-\\ Si Achille se déplace à 10 m/s et la tortue à 5 m/s et qu'initialement la distance entre les deux vaut 100m, alors on a à résoudre : 
-\[ T = 10 + \frac{10}{2} +  \frac{10}{4} + \frac{10}{8} + \cdots\] \pause
-Autrement dit :
-\[ \sum_{n=1}^{\infty} \frac{10}{2^n}\]
-C'est la somme d'une série géométrique : \[\sum_{k=1}^{\infty} ax^k = \frac{a}{1-x} \] \pause 
-Donc dans notre cas : \[ T = \frac{10}{1- 0.5} = 20 \]
+{Séries convergentes :}
+% \\
+Si Achille se déplace à 10 m/s et la tortue à 5 m/s et qu'initialement la distance entre les deux vaut 100m, alors on a à résoudre : 
+\only<1>{\[T  = 10 + \frac{10}{2} +  \frac{10}{4} + \frac{10}{8} + \cdots \]}
+\only<2>{\[T = 10 \left(1 + \frac{1}{2} +  \frac{1}{4} + \frac{1}{8} + \cdots\right)\]}
+\only<3->{\[T = 10 \left(\left(\frac{1}{2}\right)^{0} + \left(\frac{1}{2}\right)^{1} +  \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^3 + \cdots\right)\]} %\pause
+\onslide<4->{Autrement dit :
+\[ T = 10 \sum_{n=0}^{\infty} \left(\frac{1}{2}\right)^{n}\]
+C'est la somme d'une série géométrique : \[\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \text{ si} \left\vert x \right\vert < 1 \]} %\pause 
+\onslide<5->{Donc dans notre cas : \[ T = 10 \cdot \frac{1}{1- 1/2} = 10\cdot 2 = 20 \]}
 \end{frame}
 
 \begin{frame}[plain]
@@ -530,16 +581,16 @@ Imaginons la situation suivante :
 
 \begin{itemize}
 \item Une maladie terrible touche en moyenne 1/1000 personne
-\item Il existe un test fiable à $99.9\%$ \pause
+\item Il existe un test fiable à $99\%$ \pause
 \begin{itemize}
-\item Si vous êtes malade : dans $99.9\%$ des cas le test est \textcolor{OrangeRed}{$\oplus$}
-\item Si vous n'êtes pas malade : dans $99.9\%$ des cas le test est \textcolor{ForestGreen}{$\ominus$}
+\item Si vous êtes malade : dans $99\%$ des cas le test est \positif
+\item Si vous n'êtes pas malade : dans $99\%$ des cas le test est \negatif
 \end{itemize}
-\item Par précaution, vous passez le test : il est \textcolor{OrangeRed}{$\oplus$} \pause
+\item Par précaution, vous passez le test : il est \positif \pause
 \item Qu'est-ce que vous faites ? \pause
 \end{itemize}
 
-$\Rightarrow$ On voudrait connaître la probabilité d'être vraiment malade après un test \textcolor{OrangeRed}{$\oplus$}
+$\Rightarrow$ On voudrait connaître la probabilité d'être vraiment malade après un test \positif
 
 \end{frame}
 
@@ -552,7 +603,7 @@ On pose :
 
 \begin{itemize}
 \item A : vous êtes malade
-\item B : test \textcolor{OrangeRed}{$\oplus$}
+\item B : test \positif
 \end{itemize}
 
 \pause
@@ -566,11 +617,11 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 \pause
 $P(A)$ : probabilité d'être malade
 
-$P(B)$ : probabilité d'avoir un test \textcolor{ForestGreen}{$\ominus$}\pause
+$P(B)$ : probabilité d'avoir un test \positif\pause
 
-$P(A|B)$ (proba de $A$ sachant $B$) : probabilité d'être malade en ayant un test \textcolor{OrangeRed}{$\oplus$}\pause
+$P(A|B)$ (proba de $A$ sachant $B$) : probabilité d'être malade en ayant un test \positif\pause
 
-$P(B|A)$ : probabilité d'avoir un test \textcolor{OrangeRed}{$\oplus$} si on est malade \pause
+$P(B|A)$ : probabilité d'avoir un test \positif si on est malade \pause
 
 \end{frame}
 
@@ -611,7 +662,7 @@ P(A|B) &= \frac{P(B|A)P(A)}{P(B)}\\
 
 
 \pause
-La probabilité d'être malade en ayant un test \textcolor{OrangeRed}{$\oplus$} est d'environ $1\%$
+La probabilité d'être malade en ayant un test \positif est d'environ $1\%$
 
 \pause
 
@@ -707,13 +758,24 @@ Cette manière de penser peut (\textbf{doit ?}) être appliquée tous les jours 
 \item \ldots
 \end{itemize}
 
-\pause Attention cependant à ne pas le pousser à l'extrême. L'excès nuit en tout.
+%\pause Attention cependant à ne pas le pousser à l'extrême. L'excès nuit en tout.
 \end{frame}
 
 
 
 \begin{frame}[plain]{Conclusion}
-Que chacun raisonne en son âme et conscience, qu'il se fasse une idée fondée sur ses propres lectures et non d'après les racontars des autres. \vspace{1cm} \\ Albert Einstein
+\begin{center}
+\itshape
+``Que chacun raisonne en son âme et conscience, qu'il se fasse une idée fondée sur ses propres lectures et non d'après les racontars des autres.''
+\end{center}
+
+\begin{flushright}
+Albert Einstein
+\end{flushright}
+
+\begin{center}
+\includegraphics[scale=0.2]{images/Einstein.jpg}
+\end{center}
 \end{frame}
 
 
