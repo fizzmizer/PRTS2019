@@ -27,6 +27,7 @@ Université de Mons \\
 [2ex]
 \includegraphics[height=5ex]{UMONS}\hspace{2em}%
 \raisebox{-1ex}{\includegraphics[height=10ex]{UMONS_FS}}
+\raisebox{-2ex}{\includegraphics[height=15ex]{images/UMons-Rouge.png}\hspace{2em}}%
 \\
 \vspace{2ex}
 }
@@ -52,6 +53,18 @@ Université de Mons \\
   \draw[style={fill=#2}] (0,0) circle(#1);
 }
 
+\newcommand{\parachute}{%
+\draw[fill=white] (1,0) arc (0:180: 1);
+\draw (-1,0)--(1,0);
+\draw (0:0)--(30:1);
+\draw (0:0)--(60:1);
+\draw (0:0)--(90:1);
+\draw (0:0)--(120:1);
+\draw (0:0)--(150:1);
+
+\draw (1,0)--(0,-1);
+\draw (0,0)--(0,-1);
+\draw (-1,0)--(0,-1);}
 
 \begin{document}
 
@@ -445,6 +458,264 @@ Comment résoudre ce ``paradoxe'' ?
 \end{frame}
 
 
+\begin{frame}[plain]
+\frametitle{Paradoxe de Galilée : Pourquoi cette fausse conception ?}
+\framesubtitle{\textit{Galileo Galilei} (1564 P.C. - 1642 P.C.)}
+
+Même si l'on est convaincu par le raisonnement de Galilée, on avait naturellement tendance à penser que les objets plus lourds tombent plus vite.
+
+D'où nous vient cette intuition éronnée ?
+
+\onslide<2->{%
+\begin{itemize}
+\item[$\boldsymbol{\rightarrow}$] Dans la vie de tous les jours, on a quand même de bonnes raisons de penser que les objets plus lourds tombent plus vite. \\ (ex : lâcher d'un marteu et d'une plume)
+\item[$\boldsymbol{\rightarrow}$] La vie de tous les jours = sur Terre = \textbf{dans l'air !}
+\begin{itemize}
+\item Présence de \textbf{forces de frottement} dues à l'air.
+\item Ces forces de forttement sont \textbf{proportionnelles à la surface} de l'objet en mouvement.
+\end{itemize}
+\item[\color{white}$\boldsymbol{\rightarrow}$]\phantom{Si l'on fait lexpérience \textbf{en l'absence d'air} (ex : sur la Lune), on observe bien que \textbf{des objets lâchés en même temps tombent à la même vitesse} à tout instant.}
+\end{itemize}}
+
+\end{frame}
+
+\begin{frame}[plain]
+\frametitle{Paradoxe de Galilée : Pourquoi cette fausse conception ?}
+\framesubtitle{Vue d'artiste}
+\vspace{-1cm}
+\begin{center}
+\begin{tikzpicture}[background rectangle/.style={fill=cyan}, show background rectangle]
+\caneva{8}{7.5}{cyan}
+\draw (0,2.5) node{\color{umons-red}Round 1};
+%Ajout d'un élément invisible pour fixer la taille du cadre
+\draw[color=cyan,fill=cyan,yshift=3.3cm,scale=0.5] (1,0) arc (0:180: 1);
+%C'est sale... Mis ça marche
+
+\only<1>{
+\begin{scope}[yshift=2.5cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=2.5cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<2>{
+\begin{scope}[yshift=2.3cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=2.cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<3>{
+\begin{scope}[yshift=2.1cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=1.5cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<4>{
+\begin{scope}[yshift=1.8cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=0.4cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<5>{
+\begin{scope}[yshift=1.5cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=-0.5cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+
+\only<6>{
+\begin{scope}[yshift=1cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=-1.5cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+
+\only<6>{\draw (0,-2.5) node{\color{umons-red}$\Rightarrow$ L'élephant s'écrase sur le sol};}
+\draw (0,-3.5) node{\phantom{\color{umons-red}$\leftrightarrow$ Force de frottement de l'air sur le parachute}};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[plain]
+\frametitle{Paradoxe de Galilée : Pourquoi cette fausse conception ?}
+\framesubtitle{Vue d'artiste}
+\vspace{-1cm}
+\begin{center}
+\begin{tikzpicture}[background rectangle/.style={fill=cyan}, show background rectangle]
+\caneva{8}{7.5}{cyan}
+\draw (0,2.5) node{\color{umons-red}Round 2};
+%Ajout d'un élément invisible pour fixer la taille du cadre
+\draw[color=cyan,fill=cyan,yshift=3.3cm,scale=0.5] (1,0) arc (0:180: 1);
+%C'est sale... Mis ça marche
+
+
+\only<1>{
+\begin{scope}[yshift=2.5cm]
+\begin{scope}[xshift=-2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=2.5cm]
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<2>{
+\begin{scope}[yshift=2.5cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\end{scope}
+\begin{scope}[yshift=2.5cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<3>{
+\begin{scope}[yshift=2.5cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=2.5cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<4>{
+\begin{scope}[yshift=2.06cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=2.3cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<5>{
+\begin{scope}[yshift=1.4cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=2.1cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<6>{
+\begin{scope}[yshift=0.4cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=1.8cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<7>{
+\begin{scope}[yshift=-0.5cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=1.5cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+\only<8->{
+\begin{scope}[yshift=-1.5cm]
+\draw (-2,0) node{\includegraphics[scale=0.05]{images/antoine.jpg}};
+\draw (-0.97,0.4) node{\includegraphics[scale=0.5]{images/help.pdf}};
+\end{scope}
+\begin{scope}[yshift=1.cm]
+\begin{scope}[xshift=2cm,yshift=0.8cm,scale=0.5]
+\parachute
+\end{scope}
+\draw (2,0) node{\includegraphics[scale=0.08]{images/elephant.jpg}};
+\end{scope}
+}
+
+%\only<8->{\draw (-1.08,-1) node{\includegraphics[scale=0.5]{images/help.pdf}};}
+\only<8->{\draw (0,-2.5) node{\color{umons-red}$\Rightarrow$ L'élephant arrive en bas en un seul morceau};}
+\only<9>{\draw (0,-3) node{\color{umons-red}$\rightarrow$ Seule différence : qui porte le parachute};}
+\onslide<9>{\draw (0,-3.5) node{\color{umons-red}$\leftrightarrow$ Force de frottement de l'air sur le parachute};}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\frametitle{Paradoxe de Galilée : Pourquoi cette fausse conception ?}
+\framesubtitle{\textit{Galileo Galilei} (1564 P.C. - 1642 P.C.)}
+
+Même si l'on est convaincu par le raisonnement de Galilée, on avait naturellement tendance à penser que les objets plus lourds tombent plus vite.
+
+D'où nous vient cette intuition éronnée ?
+
+\begin{itemize}
+\item[$\boldsymbol{\rightarrow}$] Dans la vie de tous les jours, on a quand même de bonnes raisons de penser que les objets plus lourds tombent plus vite. \\ (ex : lâcher d'un marteu et d'une plume)
+\item[$\boldsymbol{\rightarrow}$] La vie de tous les jours = sur Terre = \textbf{dans l'air !}
+\begin{itemize}
+\item Présence de \textbf{forces de frottement} dues à l'air.
+\item Ces forces de forttement sont \textbf{proportionnelles à la surface} de l'objet en mouvement.
+\end{itemize}
+\onslide<2->{\item[$\boldsymbol{\rightarrow}$]Si l'on fait lexpérience \textbf{en l'absence d'air} (ex : sur la Lune), on observe bien que \textbf{des objets lâchés en même temps tombent à la même vitesse} à tout instant.}
+\end{itemize}
+
+\end{frame}
+
+
 
 
 \begin{frame}[plain]{Paradoxe de Zénon}
@@ -594,8 +865,8 @@ Si Achille se déplace à 10 m/s et la tortue à 5 m/s et qu'initialement la dis
 \only<3->{\[T = 10 \left(\left(\frac{1}{2}\right)^{0} + \left(\frac{1}{2}\right)^{1} +  \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^3 + \cdots\right)\]} %\pause
 \onslide<4->{Autrement dit :
 \[ T = 10 \sum_{n=0}^{\infty} \left(\frac{1}{2}\right)^{n}\]
-C'est la somme d'une série géométrique : \[\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \text{ si} \left\vert x \right\vert < 1 \]} %\pause 
-\onslide<5->{Donc dans notre cas : \[ T = 10 \cdot \frac{1}{1- 1/2} = 10\cdot 2 = 20 \]}
+C'est la somme d'une série géométrique : \[\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}\onslide<5->{, \text{ si} \left\vert x \right\vert < 1 \]}} %\pause 
+\onslide<6->{Donc dans notre cas : \[ T = 10 \cdot \frac{1}{1- 1/2} = 10\cdot 2 = 20 \]}
 \end{frame}
 
 \begin{frame}[plain]
@@ -645,7 +916,7 @@ $P(B)$ : probabilité d'avoir un test \positif\pause
 
 $P(A|B)$ (proba de $A$ sachant $B$) : probabilité d'être malade en ayant un test \positif\pause
 
-$P(B|A)$ : probabilité d'avoir un test \positif si on est malade \pause
+$P(B|A)$ : probabilité d'avoir un test \positif si on est malade %\pause
 
 \end{frame}
 
@@ -694,7 +965,7 @@ La probabilité d'être malade en ayant un test \positif est d'environ $1\%$
 \item Dans la réalité : impossible d'avoir un test fiable à $100\%$ \pause
 \item On peut utiliser les probabilités pour analyser une situation réelle et décider de la marche à suivre \pause
 \item On a tendance à réagir de manière non rationnelle\pause
-\item Un peu de réflexion remet de l'ordre là-dedans\pause
+\item Un peu de réflexion remet de l'ordre là-dedans%\pause
 \end{itemize}
 
 
@@ -778,7 +1049,7 @@ Cette manière de penser peut (\textbf{doit ?}) être appliquée tous les jours 
 \begin{itemize}
 \item Comme outil de défense contre les Fake-News
 \item Comme moyen d'entretenir sa logique, utile en toute circonstance
-\item Pour éveiller son esprit critique
+\item Pour \textbf{\alert{éveiller son esprit critique}}
 \item \ldots
 \end{itemize}
 
