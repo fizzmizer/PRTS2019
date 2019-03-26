@@ -1,4 +1,3 @@
-% !TEX encoding = UTF-8 Unicode
 \documentclass[usenames, dvipsnames]{beamer}
 
 \usepackage[utf8]{inputenc}
@@ -136,21 +135,28 @@ Sir Arthur Conan Doyle
 
 
 \begin{frame}[plain]
-\frametitle{}
 
-\begin{figure}
-\begin{minipage}[c]{.46\linewidth}
-\centering
-\textcolor{ForestGreen}{Science}
-\hspace{3em}\includegraphics[scale=.4]{images/enth/th4.pdf}
-\end{minipage} \hfill
-\begin{minipage}[c]{.46\linewidth}
-\centering
-\textcolor{ForestGreen}{Enquête}
-\hspace{3em}\includegraphics[scale=.4]{images/enth/en4.pdf}
-\end{minipage}
-\end{figure}
 
+\begin{tikzpicture}
+\caneva{12}{9}{white}
+\node at (-3.2,-0.1) {\includegraphics[scale=.4]{images/enth/th4.pdf}};
+\node at (3.2,-0.1) {\includegraphics[scale=.4]{images/enth/en4.pdf}};
+\node at (-3.2,4) {\textcolor{ForestGreen}{Science}};
+\node at (3.2,4) {\textcolor{ForestGreen}{Enquete}};
+\only<2->{\draw [very thick, Plum] (-3.2,2.8) ellipse (2 and 1);}
+\only<2->{\draw [very thick, Plum] (3.2,2.8) ellipse (2 and 1);}
+
+\only<2->{\draw [very thick, Plum, fill=Plum, opacity=.4] (-3.2,2.8) ellipse (2 and 1);}
+\only<2->{\draw [very thick, Plum, fill=Plum, opacity=.4] (3.2,2.8) ellipse (2 and 1);}
+\only<2->{\node at (0,2) {\textcolor{Plum}{\Huge Intuition}};}
+
+
+\only<3->{\draw [very thick, Blue, fill=Blue, opacity=.4] (-3.2,-3.2) ellipse (2 and 1);}
+\only<3->{\draw [very thick, Blue, fill=Blue, opacity=.4] (3.2,-3.2) ellipse (2 and 1);}
+\only<3->{\draw [very thick, Blue] (-3.2,-3.2) ellipse (2 and 1);}
+\only<3->{\draw [very thick, Blue] (3.2,-3.2) ellipse (2 and 1);}
+\only<3->{\node at (0,-2.2) {\textcolor{Blue}{\Huge Logique}};}
+\end{tikzpicture}
 
 
 \end{frame}
@@ -875,7 +881,7 @@ C'est la somme d'une série géométrique : \[\sum_{k=0}^{\infty} x^k = \frac{1}
 Imaginons la situation suivante :
 
 \begin{itemize}
-\item Une maladie terrible touche en moyenne 1/1000 personne
+\item Une maladie terrible touche en moyenne 1/10000 personne
 \item Il existe un test fiable à $99\%$ \pause
 \begin{itemize}
 \item Si vous êtes malade : dans $99\%$ des cas le test est \positif
@@ -926,14 +932,14 @@ $P(B|A)$ : probabilité d'avoir un test \positif si on est malade %\pause
 On connaît quoi, dans toute cette histoire ?
 
 \begin{itemize}
-\item $P(A) = \frac{1}{1000}$ \pause
+\item $P(A) = \frac{1}{10000}$ \pause
 \item $P(B|A) = 0.99$ \pause
 \item $P(A|B) = ??$ \pause
 \item $P(B) = ??$ \pause
 
 \begin{align*}P(B) &= P(A)P(B|A) + P(\bar{A})P(B|\bar{A})\\
-&=\frac{1}{1000}0.99 + \frac{999}{1000}0.01\\
-&= 0.011 \approx 1\%\end{align*}
+&=\frac{1}{10000}0.99 + \frac{9999}{10000}0.01\\
+&= 0.010098 \approx 1\%\end{align*}
 
 \end{itemize}
 
@@ -952,7 +958,7 @@ On remet tout ça dans la formule de Bayes et on obtient :
 
 \begin{align*}
 P(A|B) &= \frac{P(B|A)P(A)}{P(B)}\\
-&= \frac{0.99 0.001}{0.011} = 0.09 \approx 1\%
+&= \frac{0.99 \times 0.0001}{0.010098} = 0.0099 \approx 1\%
 \end{align*}
 
 
