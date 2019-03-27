@@ -1,0 +1,107 @@
+% Based on the "infolines" outer theme.
+
+\newif\ifbeamer@UMONS@navigation
+\beamer@UMONS@navigationfalse
+
+\DeclareOptionBeamer{navigation}[true]{%
+  \csname beamer@UMONS@navigation#1\endcsname}
+
+\newif\ifbeamer@UMONS@nosubsection
+\beamer@UMONS@nosubsectionfalse
+\DeclareOptionBeamer{no-subsection}[true]{%
+  \csname beamer@UMONS@nosubsection#1\endcsname}
+
+\newif\ifbeamer@UMONS@nototalframenumber
+\beamer@UMONS@nototalframenumberfalse
+
+\DeclareOptionBeamer{no-totalframenumber}[true]{%
+  \csname beamer@UMONS@nototalframenumber#1\endcsname}
+
+\newif\ifbeamer@UMONS@noframenumber
+\beamer@UMONS@noframenumberfalse
+
+%%%Ludovic Ducobu : Add Option to hide the page numbering
+\DeclareOptionBeamer{no-framenumber}[true]{%
+  \csname beamer@UMONS@noframenumber#1\endcsname}
+
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head/foot}{parent=palette quaternary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\defbeamertemplate*{footline}{UMONS theme}
+{
+  \leavevmode%
+  \hbox{%
+  % Left box (author and institute)
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{%
+      author in head/foot}%
+    \usebeamerfont{author in head/foot}%
+    \insertshortauthor
+    \beamer@ifempty{\insertshortinstitute}{}{~~\insertshortinstitute}%
+  \end{beamercolorbox}%
+  % Central box (presentation title)
+  \begin{beamercolorbox}[wd=.52\paperwidth,ht=2.25ex,dp=1ex,center]{%
+      title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  % Right box (date and pages)
+  \begin{beamercolorbox}[wd=.23\paperwidth,ht=2.25ex,dp=1ex,right]{%
+      date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    %Option Added by Ludovic Ducobu on 02/16/2019
+    % NOT SHOW THE FRAME NUMBERING if the option no-framenumber is used
+    \ifbeamer@UMONS@noframenumber%
+    \hspace*{2ex}%
+    \else%
+    \insertframenumber%
+    \ifbeamer@UMONS@nototalframenumber%
+    \hspace*{2ex}%
+    \else%
+     ~/~\inserttotalframenumber\fi%
+    \fi%
+    \hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\defbeamertemplate*{headline}{UMONS theme}
+{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.25\paperwidth,ht=1ex,dp=0ex]{%
+        upper separation line head left}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.75\paperwidth,ht=1ex,dp=0ex]{%
+        upper separation line head right}%
+    \end{beamercolorbox}}%
+  \vskip0pt
+  \ifbeamer@UMONS@navigation
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}%
+  % Box for section titles and possibly subtitles (for fast navigation)
+  \begin{beamercolorbox}{section in head/foot}
+    \ifbeamer@UMONS@nosubsection
+    \insertsectionnavigationhorizontal{\paperwidth}{%
+      \vspace*{2pt}}{\vspace*{2pt}}%
+    \else
+    \vspace*{2pt}\insertnavigation{\paperwidth}\vspace*{2pt}%
+    \fi
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}%
+  \fi
+}
+
+\setbeamertemplate{mini frames}[box]
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
